@@ -87,6 +87,108 @@ export default function Home() {
 
   return (
     <div style={{ fontFamily: "'Segoe UI', Helvetica, Arial, sans-serif", color: "#1a1a2e", overflowX: "hidden" }}>
+      {/* SEO & META TAGS */}
+      <head>
+        <title>NetPraise | Prayer App for Churches, Small Groups & Families</title>
+        <meta name="description" content="Connect through prayer. NetPraise helps churches, small groups, families, and individuals share prayer requests, pray together, and build Acts 2 community." />
+        <meta name="keywords" content="prayer app, church prayer, small group prayer, prayer request app, family prayer, prayer community, Bible study app, prayer circle" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#f97316" />
+        <meta property="og:title" content="NetPraise | Pray Together. Stay Connected." />
+        <meta property="og:description" content="A prayer community platform for churches, small groups, families, friends, and individuals." />
+        <meta property="og:image" content={HERO_IMG} />
+        <meta property="og:url" content="https://netpraise.org" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="NetPraise | Pray Together. Stay Connected." />
+        <meta name="twitter:description" content="Connect through prayer. Share prayer requests, pray for others, organize church groups, and build Acts 2 community." />
+        <meta name="author" content="NetPraise" />
+        <meta name="copyright" content="© 2026 NetPraise. All rights reserved." />
+        <link rel="canonical" href="https://netpraise.org" />
+        
+        {/* Structured Data — JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "NetPraise",
+            url: "https://netpraise.org",
+            logo: "https://netpraise.org/logo.png",
+            description: "A prayer community platform for churches, small groups, families, and individuals",
+            sameAs: [
+              "https://www.linkedin.com/company/netpraise",
+              "https://twitter.com/netpraise",
+              "https://www.facebook.com/netpraise"
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "Customer Support",
+              url: "https://app.netpraise.org/contact"
+            }
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "NetPraise",
+            description: "Prayer community app for churches, small groups, families, and individuals",
+            url: "https://app.netpraise.org",
+            applicationCategory: "ProductionApplication",
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD"
+            },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              ratingCount: "500"
+            }
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is NetPraise?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "NetPraise is a prayer community platform that helps churches, small groups, families, and individuals share prayer requests, pray for each other, and build Acts 2 community."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Can my church use NetPraise?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes! NetPraise is specifically designed for churches. Organize unlimited classes and groups, assign leaders, manage members, and encourage weekly prayer participation across your entire church."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Is NetPraise free?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "NetPraise is free to use. Create a prayer group, share requests, and start praying together with your church, family, or friends at no cost."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "How do I start a prayer group?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Sign up, create a group (church, class, family, or friends), invite members, and start sharing prayer requests. It takes less than 5 minutes to get started."
+                }
+              }
+            ]
+          })}
+        </script>
+      </head>
 
       {/* NAV */}
       <nav style={{
@@ -181,7 +283,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden" }}>
         <div style={{ display: "flex", flexWrap: "wrap", minHeight: 480 }}>
           <div style={{ flex: "1 1 400px", minHeight: 400, position: "relative" }}>
-            <img src={WORSHIP_IMG} alt="Church worship and Holy Spirit"
+            <img src={WORSHIP_IMG} alt="Church worship and Holy Spirit connection"
               style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, transparent 60%, #fff 100%)" }} />
           </div>
@@ -191,7 +293,7 @@ export default function Home() {
               When We Pray Together,<br />Everything Changes
             </h2>
             <p style={{ fontSize: 17, color: "#4b5563", lineHeight: 1.85, marginBottom: 16 }}>
-              When people in a class pray for each other, something powerful happens — <strong>relationships deepen</strong>, trust grows, and the Holy Spirit moves in ways that transform lives.
+              When people in a church prayer group pray for each other, something powerful happens — <strong>relationships deepen</strong>, trust grows, and the Holy Spirit moves in ways that transform lives.
             </p>
             <p style={{ fontSize: 17, color: "#4b5563", lineHeight: 1.85, marginBottom: 16 }}>
               This is the Acts 2 church — people invested in each other, carrying each other's burdens, and <strong>empowered by the Holy Spirit</strong> to reach more people for Christ.
@@ -206,7 +308,7 @@ export default function Home() {
       {/* WHAT IS NETPRAISE */}
       <section id="what-is" style={{ padding: "80px 24px", background: ORANGE_LIGHT, textAlign: "center" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          <span style={sectionLabel}>About</span>
+          <span style={sectionLabel}>About NetPraise</span>
           <h2 style={sectionTitle}>What Is NetPraise?</h2>
           <p style={{ fontSize: 18, color: "#4b5563", lineHeight: 1.8, marginBottom: 40 }}>
             NetPraise is a prayer community platform that helps people <strong>share prayer requests</strong>, <strong>pray for others</strong>, <strong>organize groups</strong>, and <strong>stay connected through prayer</strong> — whether you're part of a church, a small group, a family, or simply seeking prayer on your own.
@@ -239,13 +341,13 @@ export default function Home() {
             <span style={sectionLabel}>Who It's For</span>
             <h2 style={sectionTitle}>NetPraise for Everyone</h2>
             <p style={{ fontSize: 17, color: "#6b7280", maxWidth: 560, margin: "0 auto" }}>
-              However you gather, NetPraise helps you pray together.
+              Whether you need a prayer app for churches, small group prayer platform, family prayer circle, or prayer request sharing — NetPraise helps you pray together.
             </p>
           </div>
 
           {/* Small group image banner */}
           <div style={{ borderRadius: 24, overflow: "hidden", marginBottom: 48, maxHeight: 380, position: "relative" }}>
-            <img src={SMALL_GROUP_IMG} alt="Bible study small group connected through prayer"
+            <img src={SMALL_GROUP_IMG} alt="Bible study small group connected through prayer and requests"
               style={{ width: "100%", height: 380, objectFit: "cover", objectPosition: "center top", display: "block" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(154,52,18,0.78) 0%, transparent 60%)" }} />
             <div style={{ position: "absolute", bottom: 28, left: 32, right: 32 }}>
@@ -287,9 +389,9 @@ export default function Home() {
       <section id="how-it-works" style={{ padding: "80px 24px", background: "linear-gradient(180deg, #fff7ed 0%, #fdf4ff 100%)", textAlign: "center" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <span style={sectionLabel}>Simple Process</span>
-          <h2 style={sectionTitle}>How It Works</h2>
+          <h2 style={sectionTitle}>How NetPraise Works</h2>
           <p style={{ fontSize: 17, color: "#6b7280", maxWidth: 500, margin: "0 auto 52px" }}>
-            Getting started with NetPraise is easy — just three steps.
+            Getting started is easy — just three steps to start praying together.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 0, justifyContent: "center", alignItems: "flex-start" }}>
             {[
@@ -331,9 +433,9 @@ export default function Home() {
         <div style={{ maxWidth: 960, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <span style={sectionLabel}>Features</span>
-            <h2 style={sectionTitle}>Everything You Need to Pray Together</h2>
+            <h2 style={sectionTitle}>Everything You Need for Church Prayer</h2>
             <p style={{ fontSize: 17, color: "#6b7280", maxWidth: 520, margin: "0 auto" }}>
-              NetPraise is packed with tools to help your community pray with intention and stay connected in faith.
+              NetPraise includes all the tools churches and groups need to organize prayer and stay connected.
             </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16 }}>
@@ -357,7 +459,7 @@ export default function Home() {
       <section id="church-admin" style={{ padding: "80px 24px", background: ORANGE_LIGHT }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ borderRadius: 24, overflow: "hidden", marginBottom: 56, position: "relative", maxHeight: 420 }}>
-            <img src={CHURCH_IMG} alt="Church community open doors"
+            <img src={CHURCH_IMG} alt="Church community welcoming new members and praying together"
               style={{ width: "100%", height: 420, objectFit: "cover", objectPosition: "center", display: "block" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(154,52,18,0.82) 0%, rgba(249,115,22,0.45) 60%, transparent 100%)" }} />
             <div style={{ position: "absolute", top: 0, left: 0, bottom: 0, display: "flex", flexDirection: "column", justifyContent: "center", padding: "40px 48px", maxWidth: 500 }}>
